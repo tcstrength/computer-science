@@ -1,0 +1,8 @@
+CREATE TABLE user_profile (
+    user_id INT,
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    date_of_birth INT,
+    location VARCHAR(30),
+    update_date DATETIME
+)
