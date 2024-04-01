@@ -19,6 +19,7 @@ class VectorStore:
             index_name=self.search_index
         )
 
-    def add_document(self, doc: str):
-        self.vector_search.add_documents([doc])
+    def add_document(self, path_to_doc: str):
+        loader = TextLoader(path_to_doc)
+        self.vector_search.add_documents(loader.load())
 

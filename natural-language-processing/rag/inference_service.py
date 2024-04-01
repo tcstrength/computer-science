@@ -12,7 +12,6 @@ class InferenceService():
         
     def invoke(self, question):
         context = self.retriever.similarity_search(question, k=1)[0].page_content
-        print(f"Context: {context}")
         return self.chain.invoke({
             "context": context, "question": question
         })
